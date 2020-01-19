@@ -8,6 +8,7 @@
 // 所以返回 [0, 1]
 package twosum
 
+// 两遍哈希
 func TwoSum(nums []int, target int) []int {
 	result := make([]int, 0)
 	numsMap := make(map[int]int)
@@ -19,6 +20,20 @@ func TwoSum(nums []int, target int) []int {
 			result = append(result, v, index)
 			break
 		}
+	}
+	return result
+}
+
+// 一遍哈希
+func TwoSumM(nums []int, target int) []int {
+	result := make([]int, 0)
+	numsMap := make(map[int]int)
+	for i, v := range nums {
+		if j, ok := numsMap[target-v]; ok {
+			result = append(result, j, i)
+			break
+		}
+		numsMap[v] = i
 	}
 	return result
 }

@@ -22,5 +22,10 @@ func TestTwoSum(t *testing.T) {
 			t.Errorf("Test failed: %v\t%v\n", nums[i], targets[i])
 			t.Errorf("Wants: %v\t%v\n Results: %v\t%v\n", v[0], v[1], result[0], result[1])
 		}
+		result = twosum.TwoSumM(nums[i], targets[i])
+		if result[0] != v[0] || result[1] != v[1] {
+			t.Errorf("Test failed: %v\t%v\n", nums[i], targets[i])
+			t.Errorf("Wants: %v\t%v\n Results: %v\t%v\n", v[0], v[1], result[0], result[1])
+		}
 	}
 }
