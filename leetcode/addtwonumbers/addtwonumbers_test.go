@@ -43,7 +43,7 @@ func TestAddTwoNumbers(t *testing.T) {
 	wants := []*addtwonumbers.ListNode{
 		addtwonumbers.NewList(7, 0, 8),
 		addtwonumbers.NewList(1, 2, 3),
-		addtwonumbers.NewList(7, 9, 4),
+		addtwonumbers.NewList(2, 5, 0, 1),
 	}
 	for k, v := range wants {
 		result := addtwonumbers.AddTwoNumbers(l1[k], l2[k])

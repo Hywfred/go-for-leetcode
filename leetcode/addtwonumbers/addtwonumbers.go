@@ -18,44 +18,35 @@ type ListNode struct {
 }
 
 func AddTwoNumbers(l1, l2 *ListNode) *ListNode {
-	var result = new(ListNode)
-	tmpR := result
+	result := new(ListNode)
+	tmp := result
 	carry := 0
-	tmpL1 := l1
-	tmpL2 := l2
-	for tmpL1 != nil {
-		// 如果 l1 比 l2 长
-		if tmpL2 == nil {
-			tmpR.Val = tmpL1.Val
-			tmpR.Next = tmpL1.Next
-			break
+	// l1 和 l2 只有有一个还在就可以继续
+	for l1 != nil || l2 != nil {
+		x, y := 0, 0
+		// 判断是哪个还在
+		if l1 != nil {
+			x = l1.Val
+			l1 = l1.Next
 		}
-		sum := 0
-		if carry != 0 {
-			sum += carry + tmpL1.Val + tmpL2.Val
-			carry = 0
-			if sum > 9 {
-				carry = 1
-				sum = sum - 10
-			}
-		} else {
-			sum += tmpL1.Val + tmpL2.Val
-			if sum > 9 {
-				carry = 1
-				sum = sum - 10
-			}
+		if l2 != nil {
+			y = l2.Val
+			l2 = l2.Next
 		}
-		newNode := new(ListNode)
-		newNode.Val = sum
-		tmpR.Next = newNode
-		tmpR = tmpR.Next
+		sum := x + y + carry
+		carry = sum / 10
 
-		tmpL1 = tmpL1.Next
-		tmpL2 = tmpL2.Next
+		newNode := new(ListNode)
+		newNode.Val = sum % 10
+		tmp.Next = newNode
+		tmp = tmp.Next
+
 	}
-	if tmpL2 != nil {
-		tmpR.Val = tmpL2.Val
-		tmpR.Next = tmpL2.Next
+
+	if carry != 0 {
+		newNode := new(ListNode)
+		newNode.Val = carry
+		tmp.Next = newNode
 	}
 	return result.Next
 }
