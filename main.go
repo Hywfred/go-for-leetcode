@@ -1,22 +1,14 @@
 package main
 
 import (
-	"github.com/Hywfred/go-for-leetcode/leetcode/addtwonumbers"
+	"fmt"
+
+	"github.com/Hywfred/go-for-leetcode/leetcode/findMedianSortedArrays"
 )
 
 func main() {
-	l1 := []*addtwonumbers.ListNode{
-		addtwonumbers.NewList(5),
-		addtwonumbers.NewList(0),
-		addtwonumbers.NewList(7, 8, 9),
-	}
-	l2 := []*addtwonumbers.ListNode{
-		addtwonumbers.NewList(5),
-		addtwonumbers.NewList(1, 2, 3),
-		addtwonumbers.NewList(5, 6),
-	}
-	for k := range l1 {
-		result := addtwonumbers.AddTwoNumbers(l1[k], l2[k])
-		result.Print()
-	}
+	in1 := []int{1, 3}
+	in2 := []int{2}
+	result := findMedianSortedArrays.FindMedianSortedArrays(in1, in2)
+	fmt.Println(result)
 }
