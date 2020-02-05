@@ -1,12 +1,12 @@
-package main
+package longestPalindrome_test
 
 import (
-	"fmt"
+	"testing"
 
 	"github.com/Hywfred/go-for-leetcode/leetcode/longestPalindrome"
 )
 
-func main() {
+func TestLongestPalindrome(t *testing.T) {
 	in := []string{
 		"azwdzwmwcqzgcobeeiphemqbjtxzwkhiqpbrprocbppbxrnsxnwgikiaqutwpftbiinlnpyqstkiqzbggcsdzzjbrkfmhgtnbujzszxsycmvipjtktpebaafycngqasbbhxaeawwmkjcziybxowkaibqnndcjbsoehtamhspnidjylyisiaewmypfyiqtwlmejkpzlieolfdjnxntonnzfgcqlcfpoxcwqctalwrgwhvqvtrpwemxhirpgizjffqgntsmvzldpjfijdncexbwtxnmbnoykxshkqbounzrewkpqjxocvaufnhunsmsazgibxedtopnccriwcfzeomsrrangufkjfzipkmwfbmkarnyyrgdsooosgqlkzvorrrsaveuoxjeajvbdpgxlcrtqomliphnlehgrzgwujogxteyulphhuhwyoyvcxqatfkboahfqhjgujcaapoyqtsdqfwnijlkknuralezqmcryvkankszmzpgqutojoyzsnyfwsyeqqzrlhzbc",
 		"abcda",
@@ -21,7 +21,24 @@ func main() {
 		"abcccc",
 		"cccccab",
 	}
-	for _, v := range in {
-		fmt.Println(longestPalindrome.LongestPalindrome(v))
+	wants := []string{
+		"sooos",
+		"a",
+		"bb",
+		"abccba",
+		"abcba",
+		"a",
+		"bab",
+		"bb",
+		"",
+		"a",
+		"cccc",
+		"ccccc",
+	}
+	for i, v := range wants {
+		result := longestPalindrome.LongestPalindrome(in[i])
+		if result != v {
+			t.Errorf("%v\t%v\t%v\n", in[i], result, v)
+		}
 	}
 }
