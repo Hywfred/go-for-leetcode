@@ -3,12 +3,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/Hywfred/go-for-leetcode/leetcode/regularexpressionmatching"
+	"github.com/Hywfred/go-for-leetcode/leetcode/containerwithmostwater"
 )
 
 func main() {
-	fmt.Println(regularexpressionmatching.IsMatch("aaa", "a*a"))
-	fmt.Println(regularexpressionmatching.IsMatch("a", "a*"))
-	fmt.Println(regularexpressionmatching.IsMatch("a", "c*a*b"))
-	fmt.Println(regularexpressionmatching.IsMatch("a", "a"))
+	fmt.Println(containerwithmostwater.MaxArea1([]int{1, 2, 1}))
 }
