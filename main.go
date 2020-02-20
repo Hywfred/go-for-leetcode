@@ -3,13 +3,14 @@ package main
 import (
 	"fmt"
 
-	"github.com/Hywfred/go-for-leetcode/leetcode/romantointeger"
+	"github.com/Hywfred/go-for-leetcode/leetcode/longestcommonprefix"
 )
 
 func main() {
-	fmt.Println(romantointeger.RomanToInt("III"))
-	fmt.Println(romantointeger.RomanToInt("IV"))
-	fmt.Println(romantointeger.RomanToInt("IX"))
-	fmt.Println(romantointeger.RomanToInt("LVIII"))
-	fmt.Println(romantointeger.RomanToInt("MCMXCIV"))
+	fmt.Println(longestcommonprefix.LongestCommonPrefix([]string{
+		"flower", "flow", "flight",
+	}))
+	fmt.Println(longestcommonprefix.LongestCommonPrefix([]string{
+		"dog", "racecar", "car",
+	}))
 }
