@@ -3,14 +3,11 @@ package main
 import (
 	"fmt"
 
-	"github.com/Hywfred/go-for-leetcode/leetcode/longestcommonprefix"
+	"github.com/Hywfred/go-for-leetcode/leetcode/threesum"
 )
 
 func main() {
-	fmt.Println(longestcommonprefix.LongestCommonPrefix([]string{
-		"flower", "flow", "flight",
-	}))
-	fmt.Println(longestcommonprefix.LongestCommonPrefix([]string{
-		"dog", "racecar", "car",
+	fmt.Println(threesum.ThreeSum([]int{
+		0, 0, 0, 0,
 	}))
 }
