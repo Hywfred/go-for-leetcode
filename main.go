@@ -3,11 +3,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/Hywfred/go-for-leetcode/leetcode/threesumclosest"
+	"github.com/Hywfred/go-for-leetcode/leetcode/lettercombinations"
 )
 
 func main() {
-	fmt.Println(threesumclosest.ThreeSumClosest([]int{
-		-1, 2, 1, -4,
-	}, 1))
+	fmt.Printf("%v\n", lettercombinations.LetterCombination1("789"))
 }
