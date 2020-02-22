@@ -1,10 +1,13 @@
 package main
 
 import (
-	"github.com/Hywfred/go-for-leetcode/leetcode/removenthnodefromendoflist"
+	"fmt"
+
+	"github.com/Hywfred/go-for-leetcode/leetcode/validparentheses"
 )
 
 func main() {
-	l := removenthnodefromendoflist.NewList([]int{1})
-	removenthnodefromendoflist.RemoveNthFromEnd(l, 1)
+	fmt.Println(validparentheses.IsValid("([{}])"))
+	fmt.Println(validparentheses.IsValid(""))
+
 }
