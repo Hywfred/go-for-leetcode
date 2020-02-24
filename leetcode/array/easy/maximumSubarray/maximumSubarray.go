@@ -13,6 +13,7 @@ import (
 	"math"
 )
 
+// 数组遍历
 func MaxSubArray(nums []int) int {
 	result := math.MinInt32
 	sum := math.MinInt32
