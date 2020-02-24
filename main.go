@@ -3,13 +3,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/Hywfred/go-for-leetcode/leetcode/array/easy/searchInsertPosition"
+	"github.com/Hywfred/go-for-leetcode/leetcode/array/easy/maximumSubarray"
 )
 
 func main() {
-	nums := []int{1, 3, 5, 6}
-	fmt.Println(searchInsertPosition.SearchInsert(nums, 0))
-	fmt.Println(searchInsertPosition.SearchInsertBinary(nums, 0))
-	fmt.Println(searchInsertPosition.SearchInsertBinary([]int{}, 10))
-	fmt.Println(searchInsertPosition.SearchInsertBinary([]int{1}, 0))
+	nums := []int{-2, 1, -3, 4, -1, 2, 1, -5, 4}
+	fmt.Println(maximumSubarray.MaxSubArray(nums))
 }
