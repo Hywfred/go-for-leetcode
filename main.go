@@ -3,10 +3,14 @@ package main
 import (
 	"fmt"
 
-	"github.com/Hywfred/go-for-leetcode/leetcode/array/easy/plusone"
+	"github.com/Hywfred/go-for-leetcode/leetcode/array/easy/pascalsTriangleII"
 )
 
 func main() {
-	nums := []int{9}
-	fmt.Println(plusone.PlusOne(nums))
+	fmt.Printf("%v\n", pascalsTriangleII.GetRow(0))
+	fmt.Printf("%v\n", pascalsTriangleII.GetRow(1))
+	fmt.Printf("%v\n", pascalsTriangleII.GetRow(2))
+	fmt.Printf("%v\n", pascalsTriangleII.GetRow(3))
+	fmt.Printf("%v\n", pascalsTriangleII.GetRow(4))
+	fmt.Printf("%v\n", pascalsTriangleII.GetRow(5))
 }
