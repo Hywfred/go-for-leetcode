@@ -3,9 +3,11 @@ package main
 import (
 	"fmt"
 
-	"github.com/Hywfred/go-for-leetcode/leetcode/array/easy/bestTimeToBuyAndSellStock"
+	"github.com/Hywfred/go-for-leetcode/leetcode/array/middle/nextPermutation"
 )
 
 func main() {
-	fmt.Println(bestTimeToBuyAndSellStock.MaxProfitII([]int{7, 9, 1, 10}))
+	nums := []int{1, 5, 1}
+	nextPermutation.NextPermutation(nums)
+	fmt.Printf("%v\n", nums)
 }
