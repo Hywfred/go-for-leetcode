@@ -18,5 +18,9 @@ func TestMaxProfit(t *testing.T) {
 		if result != v {
 			t.Errorf("in: %v\twant: %v\tresult: %v\n", in[k], v, result)
 		}
+		result = MaxProfit(in[k])
+		if result != v {
+			t.Errorf("in: %v\twant: %v\tresult: %v\n", in[k], v, result)
+		}
 	}
 }

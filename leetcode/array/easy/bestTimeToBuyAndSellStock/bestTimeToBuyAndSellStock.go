@@ -35,3 +35,26 @@ func MaxProfit(prices []int) int {
 	}
 	return result
 }
+
+// 状态机解法
+// 还可以继续优化使空间复杂度为 O(n)
+func MaxProfitII(prices []int) int {
+	max := func(a, b int) int {
+		if a > b {
+			return a
+		}
+		return b
+	}
+	// 只允许一次交易，设置状态如下
+	l := len(prices)
+	m := make([][2]int, l)
+	// 初始状态
+	m[0][0] = 0
+	m[0][1] = -prices[0]
+	// 状态转移方程
+	for i := 1; i < l; i++ {
+		m[i][0] = max(m[i-1][0], m[i-1][1]+prices[i])
+		m[i][1] = max(m[i-1][1], -prices[i])
+	}
+	return m[l-1][0]
+}

@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Println(bestTimeToBuyAndSellStock.MaxProfit([]int{7, 9, 1, 10}))
+	fmt.Println(bestTimeToBuyAndSellStock.MaxProfitII([]int{7, 9, 1, 10}))
 }
