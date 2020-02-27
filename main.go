@@ -3,11 +3,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/Hywfred/go-for-leetcode/leetcode/array/middle/nextPermutation"
+	"github.com/Hywfred/go-for-leetcode/leetcode/array/middle/searchInRotatedSortedArray"
 )
 
 func main() {
-	nums := []int{1, 5, 1}
-	nextPermutation.NextPermutation(nums)
-	fmt.Printf("%v\n", nums)
+	nums := []int{4, 1}
+	fmt.Printf("%v\n", searchInRotatedSortedArray.Search(nums, 1))
 }
