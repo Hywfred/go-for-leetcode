@@ -1,12 +1,13 @@
 package main
 
 import (
-	"fmt"
-
-	"github.com/Hywfred/go-for-leetcode/leetcode/array/hard/trappingRainWater"
+	"github.com/Hywfred/go-for-leetcode/leetcode/daily/easy"
+	"github.com/Hywfred/go-for-leetcode/leetcode/util"
 )
 
 func main() {
-	nums := []int{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}
-	fmt.Println(trappingRainWater.Trap(nums))
+	head := util.NewList(1, 2, 3, 4, 5)
+	// var head *util.ListNode
+	node := easy.ReverseListII(head)
+	node.Print()
 }
