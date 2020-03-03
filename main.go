@@ -1,13 +1,30 @@
 package main
 
 import (
-	"github.com/Hywfred/go-for-leetcode/leetcode/daily/easy"
-	"github.com/Hywfred/go-for-leetcode/leetcode/util"
+	"fmt"
+
+	"github.com/Hywfred/go-for-leetcode/leetcode/array/middle/insertInterval"
 )
 
 func main() {
-	head := util.NewList(1, 2, 3, 4, 5)
-	// var head *util.ListNode
-	node := easy.ReverseListII(head)
-	node.Print()
+	nums := [][]int{
+		{1, 2},
+		{3, 5},
+		{6, 7},
+		{8, 10},
+		{12, 16},
+	}
+	newInterval := []int{4, 11}
+	fmt.Printf("%v\n", insertInterval.Insert(nums, newInterval))
+	nums = [][]int{
+		{1, 3},
+		{6, 9},
+	}
+	newInterval = []int{2, 5}
+	fmt.Printf("%v\n", insertInterval.Insert(nums, newInterval))
+	nums = [][]int{
+		{2, 5},
+	}
+	newInterval = []int{3, 4}
+	fmt.Printf("%v\n", insertInterval.Insert(nums, newInterval))
 }
