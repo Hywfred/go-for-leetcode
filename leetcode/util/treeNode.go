@@ -5,7 +5,3 @@ type TreeNode struct {
 	Left  *TreeNode
 	Right *TreeNode
 }
-
-func NewTree(data []int) *TreeNode {
-
-}

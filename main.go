@@ -7,7 +7,24 @@ import (
 )
 
 func main() {
-	A := []int{1, 2, 3, 0, 0, 0}
-	easy.Merge(A, 3, []int{2, 5, 6}, 3)
-	fmt.Printf("%v\n", A)
+	src := [][]int{
+		{2, 1, 1},
+		{1, 1, 0},
+		{0, 1, 1},
+	}
+	fmt.Println(easy.OrangesRotting(src))
+	src = [][]int{
+		{2, 1, 1},
+		{0, 1, 1},
+		{1, 0, 1},
+	}
+	fmt.Println(easy.OrangesRotting(src))
+	src = [][]int{
+		{1, 2},
+	}
+	fmt.Println(easy.OrangesRotting(src))
+	src = [][]int{
+		{0},
+	}
+	fmt.Println(easy.OrangesRotting(src))
 }
