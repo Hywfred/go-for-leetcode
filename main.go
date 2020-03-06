@@ -7,7 +7,8 @@ import (
 )
 
 func main() {
-	fmt.Printf("%v\n", easy.DistributeCandies(7, 4))
-	fmt.Printf("%v\n", easy.DistributeCandies(10, 3))
-	fmt.Printf("%v\n", easy.DistributeCandies(100, 1))
+	fmt.Println(easy.FindContinuousSequence(9))
+	fmt.Println(easy.FindContinuousSequence(15))
+	fmt.Println(easy.FindContinuousSequence(1))
+	fmt.Println(easy.FindContinuousSequence(3))
 }
